@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: install ansible
+          command: |
+            pip install ansible
+      - run:
           name: Ensure backend infrastructure exist
           command: |
             ansible-playbook main-remote.yml -i inventory --private-key Ansible.pem
