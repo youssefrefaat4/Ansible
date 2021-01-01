@@ -2,9 +2,5 @@
 - name: Exercise for setting up a web server in an EC2
   hosts: all
   user: ubuntu
-  vars_prompt:
-    - name: "SSH"
-      prompt: "Are you sure you want to continue connecting (yes/no)?"
-      private: no
   roles:
         - setup
