@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Ensure backend infrastructure exist
           command: |
-            ansible-playbook main-remote.yml -i inventory -private-key Ansible.pem
+            ansible-playbook main-remote.yml -i inventory --private-key Ansible.pem
 workflows:
   my_workflow:
     jobs:
