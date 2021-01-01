@@ -6,6 +6,12 @@ jobs:
       - image: python:3.7-alpine3.11  
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints: ["cf:1f:64:34:e3:ef:13:25:51:38:d5:5f:5f:b2:63:20"] 
+      - run:
+          name: Install dependencies
+          command: |
+            apk add --update ansible
       - run:
           name: install ansible
           become: yes
