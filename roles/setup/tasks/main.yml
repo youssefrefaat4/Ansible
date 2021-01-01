@@ -1,8 +1,4 @@
 ---
-- name: "install_mariadb"
-  prompt: "Are you sure you want to continue connecting (yes/no)?"
-  private: yes
-
 - name: "update apt packages."
   become: yes
   apt:
