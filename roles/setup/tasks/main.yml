@@ -1,9 +1,4 @@
 ---
-- name: "SSH"
-  prompt: "Are you sure you want to continue connecting (yes/no)?"
-  confirm: yes
-  private: no
-  
 - name: "update apt packages."
   become: yes
   apt:
