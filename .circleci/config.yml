@@ -1,0 +1,16 @@
+version: 2.1
+#test3
+jobs:
+  create_infrastructure:
+    docker:
+      - image: python:3.7-alpine3.11
+    steps:
+      - checkout
+      - run:
+          name: Ensure backend infrastructure exist
+          command: |
+            ansible-playbook main-remote.yml -i inventory -private-key Ansible.pem
+workflows:
+  my_workflow:
+    jobs:
+      - create_infrastructure
